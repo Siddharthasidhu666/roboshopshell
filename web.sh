@@ -45,10 +45,10 @@ cd /usr/share/nginx/html
 unzip /tmp/web.zip
 VALIDATE $? "unzipping files"
 
-cp /root/roboshopshell/'roboshop.conf' /etc/nginx/default.d/
+cp /root/roboshopshell/roboshop.conf /etc/nginx/default.d/
 VALIDATE $? "copying roboshop conf"
 
-sed -i "7s/localhost/172.31.89.193/" roboshop.conf
+sed -i "7s/localhost/172.31.89.193/" /root/roboshopshell/roboshop.conf
 VALIDATE $? "configured"
 
 
