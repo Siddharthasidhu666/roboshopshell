@@ -8,7 +8,7 @@ Y="\e[33m"
 N="\e[0m"   
 
 VALIDATE(){
-    if [ $1 -ne 0 ]:
+    if [ $1 -ne 0 ]
     then
         echo -e "$2 ... $R FAILED $N"
     exit 1 
@@ -17,7 +17,7 @@ VALIDATE(){
 fi
 }
 
-if [ $ID -ne 0 ]:
+if [ $ID -ne 0 ]
 then
     echo -e "$R ERROR:: Please run this script with root access $N"
     exit 1 
