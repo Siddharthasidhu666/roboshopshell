@@ -56,7 +56,7 @@ VALIDATE $? "renamed"
 
 cp /root/roboshopshell/shipping.service /etc/systemd/system/
 sed -i "6s/<CART-SERVER-IPADDRESS>/172.31.90.102/" /etc/systemd/system/shipping.service
-sed -i "6s/<MYSQL-SERVER-IPADDRESS>/172.31.90.89/" /etc/systemd/system/shipping.service
+sed -i "7s/<MYSQL-SERVER-IPADDRESS>/172.31.90.89/" /etc/systemd/system/shipping.service
 
 
 systemctl daemon-reload
