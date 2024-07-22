@@ -67,7 +67,7 @@ VALIDATE $? "replaced"
 
 
 
-systemctl daemon-reload catalogue &>> $LOGFILE
+systemctl daemon-reload &>> $LOGFILE
 VALIDATE $? "restarting deamon"
 
 systemctl enable catalogue  &>> $LOGFILE
