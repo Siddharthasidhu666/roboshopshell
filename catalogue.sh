@@ -59,7 +59,7 @@ VALIDATE $? "unzippied"
 npm install   &>> $LOGFILE
 VALIDATE $? "installed depedndenices"
 
-cp /root/roboshopshell/catlogue.service /etc/systemd/system/catalogue.service  &>> $LOGFILE
+cp /root/roboshopshell/catalogue.service /etc/systemd/system/catalogue.service  &>> $LOGFILE
 VALIDATE $? "copied successfully"
 
 sed -i "7s/<MONGODB-SERVER-IPADDRESS>/172.31.93.32/" /etc/systemd/system/catalogue.service  &>> $LOGFILE
