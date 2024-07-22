@@ -25,7 +25,8 @@ else
     echo "You are root user"
 fi
 
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp -p mongo.repo >> /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+VALIDATE $? "Copied MongoDB Repo"
 
 dnf install mongodb-org -y 
 VALIDATE $? "Installing MongoDB"
