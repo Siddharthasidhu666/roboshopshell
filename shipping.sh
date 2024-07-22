@@ -71,7 +71,7 @@ VALIDATE $? "start"
 dnf install mysql -y
 VALIDATE $? "install sql"
 
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/shipping.sql
+mysql -h 172.31.90.89 -uroot -pRoboShop@1 < /app/schema/shipping.sql
 VALIDATE $? "success" 
 
 systemctl restart shipping
