@@ -40,8 +40,11 @@ fi
 mkdir p /app
 VALIDATE $? " create dir"
 
+curl -L -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.zip
+
 cd /app
 VALIDATE $? "moved app"
+
 unzip -o /tmp/shipping.zip
 VALIDATE $? "unzipped"
 
