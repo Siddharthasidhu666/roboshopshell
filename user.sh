@@ -62,10 +62,10 @@ VALIDATE $? "installed depedndenices"
 cp /root/roboshopshell/user.service /etc/systemd/system/  &>> $LOGFILE
 VALIDATE $? "copied successfully"
 
-sed -i "6s/<REDIS-SERVER-IP>/172.31.89.134/" /etc/systemd/system/catalogue.service  &>> $LOGFILE
+sed -i "6s/<REDIS-SERVER-IP>/172.31.89.134/" /etc/systemd/system/user.service  &>> $LOGFILE
 VALIDATE $? "replaced" 
 
-sed -i "7s/<MONGODB-SERVER-IPADDRESS>/172.31.93.32/" /etc/systemd/system/catalogue.service  &>> $LOGFILE
+sed -i "7s/<MONGODB-SERVER-IPADDRESS>/172.31.93.32/" /etc/systemd/system/user.service  &>> $LOGFILE
 VALIDATE $? "replaced" 
 
 
