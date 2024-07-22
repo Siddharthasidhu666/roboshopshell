@@ -48,7 +48,7 @@ VALIDATE $? "unzipping files"
 cp /root/roboshopshell/roboshop.conf /etc/nginx/default.d/
 VALIDATE $? "copying roboshop conf"
 
-sed -i "7s/localhost/172.31.89.193/" /root/roboshopshell/roboshop.conf
+sed -i "7s/localhost/172.31.89.193/" /etc/nginx/default.d/roboshop.conf
 VALIDATE $? "configured"
 
 
