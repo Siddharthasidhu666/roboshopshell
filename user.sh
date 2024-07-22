@@ -65,7 +65,7 @@ VALIDATE $? "copied successfully"
 sed -i "6s/<REDIS-SERVER-IP>/172.31.89.134/" /etc/systemd/system/user.service  &>> $LOGFILE
 VALIDATE $? "replaced" 
 
-sed -i "7s/<MONGODB-SERVER-IPADDRESS>/172.31.93.32/" /etc/systemd/system/user.service  &>> $LOGFILE
+sed -i "7s/<MONGODB-SERVER-IP-ADDRESS>/172.31.93.32/" /etc/systemd/system/user.service  &>> $LOGFILE
 VALIDATE $? "replaced" 
 
 
