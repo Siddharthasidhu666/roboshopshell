@@ -42,7 +42,7 @@ VALIDATE $? "Download web file"
 
 cd /usr/share/nginx/html
 
-unzip /tmp/web.zip
+unzip -o /tmp/web.zip &>> $LOGFILE
 VALIDATE $? "unzipping files"
 
 cp /root/roboshopshell/roboshop.conf /etc/nginx/default.d/
