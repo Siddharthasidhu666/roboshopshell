@@ -26,6 +26,8 @@ else
 fi
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+
+dnf install mongodb-org -y 
 VALIDATE $? "Installing MongoDB"
 
 systemctl enable mongod &>> $LOGFILE
