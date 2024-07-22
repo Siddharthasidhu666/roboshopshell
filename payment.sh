@@ -59,7 +59,7 @@ pip3.6 install -r requirements.txt &>> $LOGFILE
 
 VALIDATE $? "Installing Dependencies"
 
-cp /root/roboshop-shell/payment.service /etc/systemd/system/payment.service &>> $LOGFILE
+cp /root/roboshopshell/payment.service /etc/systemd/system/payment.service &>> $LOGFILE
 
 VALIDATE $? "Copying payment service"
 
