@@ -1,2 +1,2 @@
-command=df -hT | grep -i xfs
+command=df -hT|grep -i xfs
 echo "$command"
