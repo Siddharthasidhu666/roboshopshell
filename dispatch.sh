@@ -1,2 +1,3 @@
 command=$(df -hT)
-echo "$command"
+xfs=$command|grep -i xfs
+echo "$xfs"
