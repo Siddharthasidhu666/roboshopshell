@@ -13,5 +13,4 @@ while IFS= read -r line; do
     message+=disk_usage
     fi
 done <<< $disk_usage
-
-echo "$message"
+echo "High disk utilization:$message"
