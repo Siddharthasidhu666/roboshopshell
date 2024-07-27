@@ -5,7 +5,7 @@ Y="\e[33m"
 N="\e[0m"
 
 disk_usage=$(df -hT|grep "xfs")
-threshold=90
+threshold=1
 message=""
 while IFS= read -r line; do
     usage=$(echo $line | awk '{print $6F}'|cut -d % -f1)
