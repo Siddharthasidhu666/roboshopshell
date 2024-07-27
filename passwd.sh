@@ -9,7 +9,7 @@ if [ ! -f "$FILE" ]; then
   echo "Error: Directory $FILE does not exist."
 fi
 
-while IFS=':' read -r username password UID GID full_name home_directory shell; do
+while IFS=':' read -r username password user_id group_id full_name home_directory shell; do
   echo "username=$username"
   echo "full_name=$full_name"
   echo "shell=$shell"
