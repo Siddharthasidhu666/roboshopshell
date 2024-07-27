@@ -15,3 +15,4 @@ while IFS= read -r line; do
     fi
 done <<< $disk_usage
 echo -e "High disk utilization:$message"
+echo "$message" | mail -s "High Disk Usage" aws341374@gmail.com
