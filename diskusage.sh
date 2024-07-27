@@ -8,8 +8,10 @@ disk_usage=$(df -hT|grep "xfs")
 threshold=1
 message=[]
 while IFS= read -r line; do
-  output=$($line| awk -F ' '{print $6}"|cut -d % -f1)
-  message+=output
-done <<< $diskusgae
+    usage=$($line| awk -F ' '{print $6}"|cut -d % -f1)
+    if [ "$usage" -gt 1 ]; then
+    message+=disk_usage
+    fi
+done <<< $disk_usage
 
 echo "$message"
