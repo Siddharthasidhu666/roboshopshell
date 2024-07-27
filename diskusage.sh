@@ -9,7 +9,7 @@ threshold=1
 message=[]
 while IFS= read -r line; do
     usage=$($line| awk -F ' '{print $6}"|cut -d % -f1)
-    if [ "$usage" -gt 1 ]; then
+    if [ "$usage" -gt 90 ]; then
     message+=disk_usage
     fi
 done <<< $disk_usage
