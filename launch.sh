@@ -2,7 +2,7 @@
 launch=(web app redis rabbitmq)
 type=t2.micro
 
-for item in $launch
+for item in ${launch[@]}
 do
     aws ec2 run-instances \
     --image-id ami-0b4f379183e5706b9 \
